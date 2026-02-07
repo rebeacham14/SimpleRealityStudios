@@ -1,0 +1,102 @@
+.Nav-Wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    background-color: black;
+    
+    height: 50px;
+    width: 100%;
+
+    border-bottom: 2px white solid;
+    z-index: 50;
+}
+
+.Nav-Container{
+    height: 100%;
+
+    margin: 0 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.Nav-Logo-&-Text{
+    /* background-color: red;
+    margin-left: 20%; */
+
+}
+
+.Nav-Logo{
+    /* margin-right: 10px; */
+}
+
+.Nav-Title-Text{
+
+    /* text-2xl 
+    md:text-3xl 
+    font-heading 
+    font-bold 
+
+    italic 
+    tracking-tighter 
+    text-white 
+
+    hover:text-primary 
+    transition-colors 
+    cursor-pointer     */
+
+    color: white;
+
+    margin-left: 5vw;
+
+    text-decoration: none;
+
+    /* font-style: italic; */
+    cursor: pointer;
+
+    transition: color 0.3s ease; /* Smooth transition */
+}
+.Nav-Title-Text:hover{
+    color: red;
+}
+
+.Studios-Span{
+    /* text-primary */
+    color: red;
+}
+
+.Nav-Menu-Icon-Container{
+    width: 50px
+}
+.Nav-Menu-Icon-Container button{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.Nav-Menu-Icon-Closed{
+    transform: rotate(90deg);
+    transition: color 0.3s ease; /* Smooth transition */
+}
+.Nav-Menu-Icon-Open{
+    transform: rotate(0deg);
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+
+
+.Nav-Get-Tickets{
+    /* w-full 
+    bg-primary 
+    text-white 
+    font-bold 
+    rounded-none */
+
+    width: 100%;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}

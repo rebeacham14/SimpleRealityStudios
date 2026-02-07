@@ -1,0 +1,273 @@
+.SoftwareEng-Wrapper{
+  background-color: black;
+  height: 80vh;
+
+  padding-top: 20vh;
+
+  /* color:white; */
+}
+
+.Back-Button-Container{
+    position: absolute;
+}
+.Back-Button{
+    text-decoration: none;
+
+    position: fixed;
+    top: 80px;
+    left: 20px;
+
+    width: 50px;
+    height: 30px;
+
+    display: inline-flex;
+    align-items: center;
+    
+    padding-left: 15px;
+
+    font-weight: bold;
+    font-size: 30px;
+    color: #ff4d4d; /* Bright red text */
+
+    background-color: #1a1a1a; /* Dark charcoal */
+    border: 2px solid #4d0000; /* Dark red border */
+    border-radius: 8px; /* Slightly rounded corners */
+        
+    transition: all 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+}
+.Back-Button:hover {
+    background-color: #330000; /* Darker red on hover */
+    border-color: #ff4d4d; /* Bright red border on hover */
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5); /* Subtle glow */
+}
+
+
+.SoftwareEng-Content-Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 70vh;
+}
+
+.Projects-Wrapper{
+}
+
+.Description-Header, .Project-Header {
+  color: #ff0000; /* Red Header */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  font-size: 1rem;
+
+  margin-bottom: 10px;
+}
+
+.Projects-Container{
+  border: 1px solid rgb(255, 255, 255);
+  
+  width: 250px;
+  height: 250px;
+
+  background-color: rgba(48, 18, 18, 0.683);
+}
+
+.Projects-Items-Container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The core center element */
+.center-circle {
+  width: 150px;
+  height: 150px;
+  
+  border: 1px solid rgba(255, 255, 255, 0.37);
+  border-radius: 50%;
+}
+
+/* Base style for all orbiting items */
+.orbit-item {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Initial positioning in the dead center of the wrapper */
+  top: 50%;
+  left: 50%;
+  
+  transform-origin: 0 100px; 
+  
+  /* Centers the item itself on the starting point */
+  margin-left: -0px;
+  margin-top: -100px;
+
+  animation: orbit-clockwise 8s linear infinite;
+}
+
+/* Pause the animation when hovering anywhere on the wrapper */
+.Projects-Items-Container:hover .orbit-item,
+.Projects-Items-Container:hover .orbit-item span {
+  animation-play-state: paused;
+}
+.orbit-item span {
+  display: block;
+
+  font-size: 15px;
+  /* width: 100%;
+  height: 100%; */
+
+  padding: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color:white;
+
+  background-color: #1a1a1a; /* Dark charcoal */
+  border: 2px solid #4d0000; /* Dark red border */
+  border-radius: 40px;
+
+    box-shadow: 
+    0 0 5px red,   /* Inner glow */
+    0 0 10px rgba(141, 45, 45, 0.628);  /* Medium glow */
+
+  cursor: pointer;
+
+  animation: orbit-counter 8s linear infinite;
+
+  transition: scale 0.3s ease; 
+}
+.orbit-item span:hover {
+  scale: 1.1;
+  background-color: #5e0101; /* Darker red on hover */
+  border-color: #ff4d4d; /* Bright red border on hover */
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.5); /* Subtle glow */
+}
+
+
+/* Spread items out around the circle using negative delays */
+.i1 { 
+  animation-delay: 0s; 
+}
+.i2 { 
+    animation-delay: 2.5s; 
+}
+.i3 { 
+    animation-delay: 5.2s; 
+}
+
+.i2 span { 
+    animation-delay: 2.5s; 
+}
+.i3 span{ 
+    animation-delay: 5.2s; 
+}
+
+
+/* Clockwise Orbit */
+@keyframes orbit-clockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+
+}/* Counter-Clockwise Spin (Keeps text upright) */
+@keyframes orbit-counter {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+
+
+.Project-Description-Container{
+  border: 1px solid rgb(255, 255, 255);
+  width: 40vw;
+  /* height: 50vh; */
+
+  background-color: rgba(48, 18, 18, 0.683);
+
+}
+
+.Description-Missing-Message{
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+}
+
+.Description-Title {
+  font-size: 17px;
+  font-weight: 900;
+  margin: 10px 0;
+  color: #ffffff;
+  padding: 5px;
+}
+
+.Description-Content{
+  color: white;
+  font-size: 14px;
+  padding: 0 12px;
+
+  margin-bottom: 30px;
+
+}
+
+
+.Project-Tech-Stack-Wrapper{
+  /* border: 1px solid yellow; */
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 10px;
+}
+
+.Project-Tech-Stack-Header-Container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  color: rgb(190, 74, 74);
+
+  border-top: 1px solid white;
+}
+
+.Project-Tech-Stack-Container{
+  display: flex;
+  justify-content: space-around;
+
+  flex-direction: row;
+
+  max-height: 200px;
+}
+
+
+.Project-Tech-Stack-Languages-Wrapper, .Project-Tech-Stack-Frameworks-Wrapper{
+  border: 1px solid rgb(98, 13, 13);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.Project-Tech-Stack-Languages, .Project-Tech-Stack-Frameworks {
+  /* display: inline-block; */
+
+  padding: 5px 10px;
+  margin: 8px;
+  border: 1px solid red;
+  border-radius: 20px;
+  color: white;
+
+  font-family: 'Fira Code', monospace;
+  font-size: 10px;
+
+  text-align: center;
+}

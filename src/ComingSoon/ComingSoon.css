@@ -1,0 +1,64 @@
+.Coming-Soon-Wrapper{
+  background-color: black;
+  height: 80vh;
+
+  padding-top: 20vh;
+
+  /* color:white; */
+}
+
+.Back-Button-Container{
+    position: absolute;
+}
+.Back-Button{
+    text-decoration: none;
+
+    position: fixed;
+    top: 80px;
+    left: 20px;
+
+    width: 50px;
+    height: 30px;
+
+    display: inline-flex;
+    align-items: center;
+    
+    padding-left: 15px;
+
+    font-weight: bold;
+    font-size: 30px;
+    color: #ff4d4d; /* Bright red text */
+
+    background-color: #1a1a1a; /* Dark charcoal */
+    border: 2px solid #4d0000; /* Dark red border */
+    border-radius: 8px; /* Slightly rounded corners */
+        
+    transition: all 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+}
+.Back-Button:hover {
+    background-color: #330000; /* Darker red on hover */
+    border-color: #ff4d4d; /* Bright red border on hover */
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5); /* Subtle glow */
+}
+
+.Coming-Soon-Content-Wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 70vh;
+
+
+}
+
+.Coming-Soon-Header{
+    font-size: 30px;
+    color: white;
+}
+
+.Coming-Soon-Content{
+    font-size: 20px;
+    color: white;
+}

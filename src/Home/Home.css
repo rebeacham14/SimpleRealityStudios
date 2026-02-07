@@ -1,0 +1,137 @@
+.Home-Wrapper{
+  background-color: black;
+  height: 80vh;
+
+  padding-top: 20vh;
+}
+
+.Home-Content{
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeIn 1.5s ease-in forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.Meet-Banner{
+  font-family: Garamond, serif;
+  font-size: 3rem;
+  color: white;
+
+  margin-bottom: 70px;
+}
+
+.Home-Images-Container{
+}
+
+.Img-1-Show{
+  max-width: 12%; /* Ensures the image doesn't exceed its container's width */
+  height: auto;    /* Automatically calculates the height to maintain the aspect ratio */
+  position: absolute;
+
+  bottom:5%;
+  right:43%;
+
+  transition: all 0.2s ease-in;
+
+}
+.Img-1-Hide{
+  opacity: 0;
+
+  max-width: 10%; /* Ensures the image doesn't exceed its container's width */
+  height: auto;    /* Automatically calculates the height to maintain the aspect ratio */
+  position: absolute;
+
+  bottom:0;
+  right:38%;
+
+  transition: all 0.8s ease-out;
+}
+
+.Img-2-Show{
+  max-width: 8%; /* Ensures the image doesn't exceed its container's width */
+  height: auto;    /* Automatically calculates the height to maintain the aspect ratio */
+  position: absolute;
+
+  bottom:10%;
+  right:15%;
+
+  transition: all 0.2s ease-in;
+}
+.Img-2-Hide{
+  opacity: 0;
+
+  max-width: 12%; /* Ensures the image doesn't exceed its container's width */
+  height: auto;    /* Automatically calculates the height to maintain the aspect ratio */
+  position: absolute;
+
+  bottom:5%;
+  right:5%;
+
+  transition: all 0.8s ease-out;
+}
+
+.Img-3-Show{
+  max-width: 10%; /* Ensures the image doesn't exceed its container's width */
+  height: auto;    /* Automatically calculates the height to maintain the aspect ratio */
+  position: absolute;
+
+  bottom:5%;
+  left:15%;
+
+  transition: all 0.2s ease-in;
+}
+.Img-3-Hide{
+  opacity: 0;
+
+  max-width: 12%; /* Ensures the image doesn't exceed its container's width */
+  height: auto;    /* Automatically calculates the height to maintain the aspect ratio */
+  position: absolute;
+
+  bottom:1%;
+  left:1%;
+
+  transition: all 0.8s ease-out;
+}
+
+
+.Home-Buttons-Container{
+  display: flex;
+  flex-direction: column;
+}
+.Home-Buttons-Container button{
+  padding:10px 0;
+  margin: 10px 0;
+  width: 250px;
+
+  background-color: transparent;
+  color: rgb(50, 50, 50);
+  border: 2px solid black;
+  /* border-radius: 5px; */
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.3rem;
+
+  cursor: pointer;
+
+  transition: all 0.5s ease;
+}
+.Home-Buttons-Container button:hover{
+  color: white;
+
+  border: 2px solid rgb(109, 47, 47);
+  border-radius: 30px;
+
+  box-shadow: 
+    0 0 5px red,   /* Inner glow */
+    0 0 10px rgb(141, 45, 45),  /* Medium glow */
+    0 0 15px rgb(163, 83, 83),  /* Outer glow */
+    0 0 20px rgb(79, 53, 53);  /* Farthest glow */
+}
+
