@@ -1,6 +1,8 @@
 import './Home.css';
 
-import React, { useEffect, useState } from "react";
+import emailjs from '@emailjs/browser';
+
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from 'react-router-dom';
 
 
@@ -32,8 +34,6 @@ function Home() {
   // };
 
 
-
-
   // logic for name+buttons fade in and out
   const [showName, setShowName] = useState(false);
   const [showButtons, setShowButtons] = useState(false);
@@ -43,7 +43,7 @@ function Home() {
     const nameFadeInTimer = setTimeout(() => setShowName(true), 200);
 
     // Fade out after 3.5s
-    const nameFadeOutTimer = setTimeout(() => setShowName(false), 2000);
+    const nameFadeOutTimer = setTimeout(() => setShowName(false), 2500);
 
     // Fade in after 4s
     const buttonsFadeInTimer = setTimeout(() => setShowButtons(true), 2800);
@@ -57,17 +57,119 @@ function Home() {
   }, []);
 
 
+  // emailjs component
+  const form = useRef();
+
+
+  const sendEmail = (e) => {
+    e.preventDefault(); // Prevents the default form submission and page reload
+
+    emailjs
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        () => {
+          alert('Message Sent Successfully!');
+          form.current.reset(); // Resets the form fields after success
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert('Failed to send message, please try again.');
+        }
+      );
+  };
+
 
   return (
     <div className="Home-Wrapper">
-      <div className='Home-Content'>
+
+      <div className={showName ? 'Name-Banner' : 'Name-Banner-Fade-Out'}>
+          <div>
+              Ryan Beacham
+          </div>
+      </div> 
+
+      <div className='Home-Content-Wrapper'>
+
+        <div className='Bio-Intro-Wrapper'>
+          
+          <div className='Bio-Pic-Container'>
+            <img className='Img-1' src='src/Home/Images/Home_Img_1.PNG' alt="Description of the image"></img>
+          </div>
+
+          <div className='Bio-Content-Container'>
+            <p>
+              Hi, name is Ryan. Some know me as Ace. 
+              <br></br>
+              <br></br>
+              I am a creative soul at my core, passionate about software engineering, vast creative worlds, and thoughtful/soulful songwriting.
+              <br></br>
+              When I’m not at the gym or in the library doing schoolwork, I’m locked into my laptop flushing out characters for Simple Reality Studios or engineering software for local organizations. 
+              <br></br>
+              <br></br>
+              I am excited to be entering the tech world at such a pivotal era. 
+              <br></br>
+              <br></br>
+              I’m here to grow my legacy, as someone who transforms complicated ideas into a simple reality.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div className='Contact-Me-Wrapper'>
+          
+          <div className='Contact-Me-Header'>
+            <p>
+              Contact Me
+            </p>
+          </div>
+
+          <div className='Contact-Me-Form-Container'>
+            
+            <form className='Contact-Me-Form'>
+              {/* send to my email */}
+
+              <div className='Contact-Sender-Input'>
+                <div className='Contact-Sender-Contact-Info'>
+                  <div>
+                    <label for='name'>First & Last Name</label>
+                    <input type='text' id='name' placeholder='First & Last name'></input>
+                  </div>
+
+                  <div>
+                    <label for='email'>Email</label>
+                    <input type='email' id='email' placeholder='sample@this.com' required></input>
+                  </div>
+                </div>
+
+                <div className='Contact-Sender-Message'>
+                  <label for='message'></label>
+                  <textarea type='text' id='message' placeholder='Message' required></textarea>
+                </div>
+
+              </div>
 
 
-        <div className={showName ? 'Name-Banner' : 'Name-Banner-Fade-Out'}>
-            <div>
-                Ryan Beacham
-            </div>
-        </div> 
+              <div className='Contact-Submit-Container'>
+                <input type="submit" id='submit' />
+                <input type="reset" id='reset' />
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
 
         
         <div className='Home-Images-Container'>

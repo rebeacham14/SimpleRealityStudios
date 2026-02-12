@@ -1,6 +1,7 @@
 import './App.css';
 
 import NavBar from './NavBar/NavBar';
+import Footer from './Footer/Footer';
 import Home from './Home/Home';
 
 import SoftwareEng from './SoftwareEng/SoftwareEng';
@@ -17,6 +18,7 @@ function App() {
   return (
     <div className="App-Wrapper">
       <NavBar/>
+      <Footer/>
 
       <Routes>
         <Route index element={<Home />} />
