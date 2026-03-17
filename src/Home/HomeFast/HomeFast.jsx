@@ -1,4 +1,4 @@
-import './Home.css';
+import './HomeFast.css';
 
 
 import React, { useEffect, useState, useRef } from "react";
@@ -25,14 +25,9 @@ function Home() {
 
   useEffect(() => {
 
-    // hide load screen after 14s
-    const loaderTimer = setTimeout(() => setIsLoading(false), 14000);
-
-    const mainContentFadeTimer = setTimeout(() => setisMainContentLoaded(true), 14000);
+    const mainContentFadeTimer = setTimeout(() => setisMainContentLoaded(true), 0);
 
     return () => {
-      // load screen
-      clearTimeout(loaderTimer);
 
       // load content fade-in
       clearTimeout(mainContentFadeTimer);
@@ -42,13 +37,6 @@ function Home() {
 
   return (
     <>
-      {isLoading && (
-        <div id="loader">
-          <div className="rising-text"><span className='SRSspan'>SIMPLE REALITY STUDIOS</span></div>
-          <div className="presents-text">presents...</div>
-          <div className="ryan-text">Ryan Beacham</div>
-        </div>
-      )}
 
       <div className="Home-Wrapper">
         <div className='home-section-container'>

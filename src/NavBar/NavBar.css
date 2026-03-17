@@ -69,12 +69,13 @@
 }
 
 .Nav-Menu-Icon-Container{
-    width: 50px
+    width: 50px;
 }
 .Nav-Menu-Icon-Container button{
     background-color: transparent;
     color: white;
     border: none;
+    opacity: 0;
 }
 
 .Nav-Menu-Icon-Closed{

@@ -1,0 +1,282 @@
+.Home-Wrapper{
+  background-color: black;
+  border: 2px solid yellow;
+  width: auto;
+  height: 100vh;
+
+  padding: 50px 10px 10px 10px;
+}
+
+/* -------------------------------------- */
+
+
+
+/* -------------------------------------- */
+
+.Name-Banner{
+  border: 1px solid blue;
+  width: 100%;
+  margin-top: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Garamond, serif;
+  font-size: 3rem;
+  color: white;
+
+  transition: all 2s ease;
+}
+.Name-Banner-Fade-Out {
+  border: 1px solid blue;
+  width: 100%;
+  margin-top: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Garamond, serif;
+  font-size: 3rem;
+  color: white;
+
+  /* margin-bottom: 70px; */
+
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.Home-Content-Wrapper{
+  border: 2px solid red;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.Bio-Intro-Wrapper{
+  border: 1px solid blue;
+
+  width: 85%;
+  /* height: 300px; */
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 10px;
+}
+
+.Bio-Pic-Container{
+  border: 1px solid red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* height: 250px; */
+  width: 40%;
+
+}
+.Img-1{
+  width: 50%; /* Ensures the image doesn't exceed its container's width */
+}
+
+.Bio-Content-Container{
+  border: 1px solid green;
+
+  /* height: 200px; */
+  width: 50%;
+
+  color: white;
+}
+
+.Bio-Content-Container p{
+  font-size: 0.9rem;
+  padding: 5px;
+}
+
+
+
+.Contact-Me-Wrapper{
+  border: 1px solid yellow;
+  width: 85%;
+  height: 300px;
+
+}
+.Contact-Me-Header{
+  text-align: center;
+  color: white;
+}
+.Contact-Me-Form-Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.Contact-Me-Form{
+  background-color: #3a0000;
+  border: 2px solid white;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 100%;
+
+}
+
+.Contact-Sender-Input{
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.Contact-Sender-Contact-Info{
+
+}
+.Contact-Sender-Contact-Info div{
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  margin-bottom: 10px;
+
+  font-size: 0.8rem;
+}
+#name, #email, #message{
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+  padding: 5px;
+
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+#name:focus, 
+#email:focus, 
+#message:focus{
+  border-color: #ff0000;
+  outline: none;
+}
+
+.Contact-Sender-Message{
+  
+}
+#message{
+  height:70px;
+  width: 200px;
+}
+
+
+.Contact-Submit-Container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.Contact-Submit-Container input{
+  margin: 0 10px;
+}
+#submit{
+
+}
+#reset{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.Home-Images-Container{
+} 
+*/
+
+.Img-1-Show{
+  max-width: 12%; /* Ensures the image doesn't exceed its container's width */
+  height: auto;    /* Automatically calculates the height to maintain the aspect ratio */
+  position: absolute;
+
+  bottom:5%;
+  right:43%;
+
+  transition: all 0.2s ease-in;
+
+}
+.Img-1-Hide{
+  opacity: 0;
+
+  max-width: 10%; /* Ensures the image doesn't exceed its container's width */
+  height: auto;    /* Automatically calculates the height to maintain the aspect ratio */
+  position: absolute;
+
+  bottom:0;
+  right:38%;
+
+  transition: all 0.8s ease-out;
+}
+
+.Img-2-Show{
+  max-width: 8%; /* Ensures the image doesn't exceed its container's width */
+  height: auto;    /* Automatically calculates the height to maintain the aspect ratio */
+  position: absolute;
+
+  bottom:10%;
+  right:15%;
+
+  transition: all 0.2s ease-in;
+}
+.Img-2-Hide{
+  opacity: 0;
+
+  max-width: 12%; /* Ensures the image doesn't exceed its container's width */
+  height: auto;    /* Automatically calculates the height to maintain the aspect ratio */
+  position: absolute;
+
+  bottom:5%;
+  right:5%;
+
+  transition: all 0.8s ease-out;
+}
+
+.Img-3-Show{
+  max-width: 10%; /* Ensures the image doesn't exceed its container's width */
+  height: auto;    /* Automatically calculates the height to maintain the aspect ratio */
+  position: absolute;
+
+  bottom:5%;
+  left:15%;
+
+  transition: all 0.2s ease-in;
+}
+.Img-3-Hide{
+  opacity: 0;
+
+  max-width: 12%; /* Ensures the image doesn't exceed its container's width */
+  height: auto;    /* Automatically calculates the height to maintain the aspect ratio */
+  position: absolute;
+
+  bottom:1%;
+  left:1%;
+
+  transition: all 0.8s ease-out;
+}
+
+

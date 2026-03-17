@@ -6,7 +6,7 @@ function ComingSoon() {
   return (
     <div className="Coming-Soon-Wrapper">
       <div className='Back-Button-Container'>
-        <Link to="/"><button className='Back-Button'>
+        <Link to="/home-fast"><button className='Back-Button'>
           &lt;
         </button></Link>
       </div>
