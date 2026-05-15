@@ -1,6 +1,6 @@
 .SoftwareEng-Wrapper{
   background-color: black;
-  height: 80vh;
+  height: 100vh;
 
   padding-top: 20vh;
 
@@ -161,19 +161,24 @@
   animation-delay: 0s; 
 }
 .i2 { 
-    animation-delay: 2.5s; 
+    animation-delay: 1.7s; 
 }
 .i3 { 
-    animation-delay: 5.2s; 
+  animation-delay: 3.4s; 
 }
-
+.i4 { 
+  animation-delay: 5.1s; 
+}
+/*  */
 .i2 span { 
-    animation-delay: 2.5s; 
+    animation-delay: 1.7s; 
 }
 .i3 span{ 
-    animation-delay: 5.2s; 
+  animation-delay: 3.4s; 
 }
-
+.i4 span{ 
+  animation-delay: 5.1s; 
+}
 
 /* Clockwise Orbit */
 @keyframes orbit-clockwise {
@@ -194,7 +199,6 @@
   /* height: 50vh; */
 
   background-color: rgba(48, 18, 18, 0.683);
-
 }
 
 .Description-Missing-Message{
@@ -219,6 +223,36 @@
   margin-bottom: 30px;
 
 }
+
+.Responsibilities-Title-Container{
+  border-top: 1px solid rgb(255, 255, 255);
+}
+.Responsibilities-Title{
+  font-size: 17px;
+  font-weight: 900;
+  margin: 10px 0;
+  color: #ffffff;
+  padding: 5px;
+}
+
+
+
+
+.Responsibilities-Content-Container{
+
+}
+
+
+.Responsibilities-Content{
+  color: white;
+  font-size: 14px;
+  padding: 0 12px;
+
+  margin-bottom: 30px;
+
+}
+
+
 
 
 .Project-Tech-Stack-Wrapper{

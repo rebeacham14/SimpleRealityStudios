@@ -23,14 +23,27 @@ function SoftwareEng() {
     ], 
     "E-Board":[
       "E-Board",
-      "Task Managing System",
+      "Task managment system.",
       ["C"],
       ["ASP.NET"]
     ], 
+    "TARS":[
+      "TARS",
+      "Replica of Intersteller's TARS AI robot assistant.",
+      ["Python"],
+      ["Ollama", "Piper-Voice"]
+    ], 
+    "Portfolio":[
+      "",
+      "",
+      ["JavaScript"],
+      ["Netlify","StackBlitz"]
+    ]
   };
 
   const [activeProject, setActiveProject] = useState('');
   const [projectDescription, setProjectDescription] = useState('');
+  const [projectResponsibilities, setProjectResponsibilities] = useState('');
   const [projectLanguages, setprojectLanguages] = useState(['']);
   const [projectFrameworks, setprojectFrameworks] = useState(['']);
   
@@ -63,6 +76,15 @@ function SoftwareEng() {
         languages = project[2];
         frameworks = project[3];
         break;
+
+      case "TARS":
+        title = project[0];
+        description = project[1];
+        languages = project[2];
+        frameworks = project[3];
+        break;
+  
+
       default:
         return '';
     }
@@ -95,6 +117,7 @@ function SoftwareEng() {
           <div className='Projects-Container'>
             <div class="Projects-Items-Container">
               <div class="center-circle"></div>
+              <div class="orbit-item i4" onClick={() => updateActiveProject(project["TARS"])}><span>{project["TARS"][0]}</span></div>
               <div class="orbit-item i3" onClick={() => updateActiveProject(project["BroncoBond"])}><span>{project["BroncoBond"][0]}</span></div>
               <div class="orbit-item i2" onClick={() => updateActiveProject(project["The Core"])}><span>{project["The Core"][0]}</span></div>
               <div class="orbit-item i1" onClick={() => updateActiveProject(project["E-Board"])}><span>{project["E-Board"][0]}</span></div>
@@ -137,6 +160,19 @@ function SoftwareEng() {
                 <div className="Description-Content-Container">
                   <div className="Description-Content">
                     {projectDescription}
+                  </div>
+                </div>
+
+
+                <div className="Responsibilities-Title-Container">
+                  <div className="Responsibilities-Title">
+                    My Responsibilities
+                  </div>
+                </div>
+
+                <div className="Responsibilities-Content-Container">
+                  <div className="Responsibilities-Content">
+                    {projectResponsibilities}
                   </div>
                 </div>
 
