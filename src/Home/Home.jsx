@@ -1,5 +1,8 @@
 import './Home.css';
 
+import softwarePic from './Images/Home_Img_1.PNG';
+import gameDevPic from './Images/Home_Img_2.PNG';
+import songwritterPic from './Images/Home_Img_3.PNG';
 
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from 'react-router-dom';
@@ -9,10 +12,14 @@ function Home() {
 
   // 1. Define your image paths
   const images = {
-    default: 'src/Home/Images/Home_Img_1.PNG',
-    software: 'src/Home/Images/Home_Img_1.PNG',
-    gameDev: 'src/Home/Images/Home_Img_2.PNG',
-    songwritter: 'src/Home/Images/Home_Img_3.PNG'
+    // default: 'src/Home/Images/Home_Img_1.PNG',
+    // software: 'src/Home/Images/Home_Img_1.PNG',
+    // gameDev: 'src/Home/Images/Home_Img_2.PNG',
+    // songwritter: 'src/Home/Images/Home_Img_3.PNG'
+    default: softwarePic,
+    software: softwarePic,
+    gameDev: gameDevPic,
+    songwritter: songwritterPic
   };
 
   
